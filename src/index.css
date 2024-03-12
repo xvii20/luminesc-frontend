@@ -1,0 +1,1277 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  /* background-color: #352f44; */
+  background-color: #e0e0e0;
+  /* background-color: #dcdcdc; */
+  /* color: #faf0e6; */
+}
+
+/* app component css */
+.wholepagediv {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingdiv {
+  display: flex;
+  justify-content: center;
+  /* background-color: #fdfdfd; */
+  font-size: 1.4rem;
+  margin-top: 300px;
+}
+
+/* navbar component css */
+
+.welcome {
+}
+
+.tooltipforhamburger {
+}
+
+.hamburger-menu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  z-index: 100000;
+  position: absolute;
+  left: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  /* background-color: #000; */
+  background-color: #fdfdfd;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Adds transition for smoother animation for the hamburger lines */
+  margin: 4px 0; /* Adds margin to space out the three hamburger menu lines */
+}
+
+.linewhenhamburgermenuopened {
+  width: 30px;
+  height: 2px;
+  background-color: #fdfdfd;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin: 4px 0;
+}
+
+.open .line:nth-child(1) {
+  transform: rotate(46deg) translate(7px, 7px);
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -8px);
+}
+
+.open .linewhenhamburgermenuopened:nth-child(1) {
+  transform: rotate(46deg) translate(7px, 7px);
+}
+
+.open .linewhenhamburgermenuopened:nth-child(2) {
+  opacity: 0;
+}
+
+.open .linewhenhamburgermenuopened:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -8px);
+}
+
+.navbar {
+  /* background-color: #5c5470; */
+  background-color: #333333;
+  height: 70px;
+  position: relative;
+}
+
+.profilemodal {
+  position: absolute;
+  right: 100px;
+  border-radius: 4px;
+  height: 280px;
+  width: 300px;
+  top: 20px;
+  background-color: #282828;
+  color: #ccc;
+  z-index: 2;
+}
+
+.profilemodalimagediv {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileinfodiv {
+  margin-top: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+.profilemodalname {
+  margin-top: 10px;
+
+  overflow: auto;
+}
+
+.profilemodalpic {
+  right: 10px;
+  height: 50px;
+  border-radius: 50%; /* Sets border-radius to circle */
+  cursor: pointer;
+}
+
+.googleprofilepic {
+  position: absolute;
+  right: 10px;
+  height: 45px;
+  border-radius: 50%; /* Sets border-radius to circle */
+  cursor: pointer;
+}
+
+.signoutbuttondiv {
+  display: flex;
+  /* outline: 2px solid red; */
+  justify-content: center;
+  height: 110px;
+  align-items: center;
+}
+
+.signoutbutton {
+  background-color: grey;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100px;
+  height: 33px;
+  transition: background-color 0.3s ease;
+}
+
+.signoutbutton:hover {
+  background-color: white;
+}
+
+.chromalogodiv {
+  outline: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.chromalogodiv li {
+  font-size: 1.4rem;
+}
+
+/* balance component css */
+.parentbalancediv {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.modifiedparentbalancediv {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.parentincomeexpensediv {
+  margin-top: 40px;
+  display: flex;
+  /* margin-right: 400px; */
+  gap: 50px;
+  background-color: #5c5470;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Black Box Shadow */
+}
+
+.incomeamount {
+  color: #2ecc71;
+  margin-top: 4px;
+}
+
+.expenseamount {
+  color: red;
+  margin-top: 4px;
+}
+
+/* tableinterface component css */
+
+.mapparent {
+  display: flex;
+  align-items: center;
+}
+
+.red {
+  color: #d32f2f;
+}
+
+.green {
+  color: #4caf50;
+}
+
+.historyparentdiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.historydiv {
+  font-size: 1.3rem;
+  width: 530px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #fdfdfd;
+  margin-left: 10px;
+}
+
+.table {
+  margin-top: 10px;
+
+  width: 500px;
+  padding-left: 10px;
+  font-size: 1.3rem;
+  display: flex;
+  padding-right: 10px;
+  margin-right: 70px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tablewrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  overflow: auto;
+}
+
+.date {
+  margin-top: 10px;
+  margin-right: 30px;
+  font-size: 16px;
+  visibility: hidden;
+}
+
+.tablerow {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #5c5470; */
+  padding: 10px;
+}
+
+.parentbody {
+  position: relative;
+}
+
+.modal {
+  /* outline: 2px solid green; */
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tiptop {
+  background-color: #faf0e6;
+  color: black;
+  width: 250px;
+}
+
+/* Sidebar component css */
+
+.sidebarlist {
+  outline: 2px solid green;
+}
+
+.sidebarele {
+  width: 100%;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+  transition: left 0.3s ease; /* Adds transition for smooth sliding effect for the sidebar */
+  z-index: 9;
+}
+
+.sidebar-closed {
+  left: -250px;
+}
+
+.chartspan {
+  padding-left: 9px;
+}
+
+.newtransactionspan {
+  padding-left: 7px;
+  padding-left: 13px;
+  padding-top: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.sidebarhomeicon {
+  height: 17px;
+}
+
+.alignment {
+  display: flex;
+  align-items: center;
+}
+
+.overviewparent {
+}
+
+.overview {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem !important;
+  /* color: #9966cc !important; */
+}
+
+.logoutspan {
+  padding-left: 10px;
+  padding-top: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+}
+.homespan {
+  padding-left: 13px;
+  padding-top: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.sidebarlogoutspan {
+  padding-left: 7px;
+}
+
+.newtransaction,
+.charts,
+.settings,
+.home,
+.sidebarlogout {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.newtransaction:hover,
+.charts:hover,
+.settings:hover,
+.home:hover,
+.sidebarlogout:hover {
+  background-color: #747775;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebareleactive span {
+  color: #42a5f5;
+}
+
+.sidebar h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 13px;
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar li a:hover {
+  color: #ddd;
+}
+
+/* Addtransaction component css*/
+
+.divvy {
+  outline: 2px solid pink;
+  display: flex;
+  justify-content: center;
+}
+
+.successfultransaction {
+}
+
+.amountinput {
+  font-size: 16px;
+  height: 30px;
+}
+
+.textinput {
+  font-size: 16px;
+  height: 30px;
+}
+
+.addnewtransactionspan {
+  font-size: 1.2rem;
+}
+
+.addnewtransactionbuttondiv {
+  /* outline: 2px solid green; */
+  width: 100%;
+}
+
+.addnewtransactionbuttondiv button {
+  margin-left: 20px;
+  height: 28px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.xicon {
+  cursor: pointer;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.addtransactionparentdiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.addtransactiondiv {
+  margin-top: 20px;
+
+  width: 530px;
+  font-size: 1.2rem;
+}
+
+/* .addnewtransaction div {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+} */
+
+.addnewtransaction {
+  margin-bottom: 10px;
+
+  padding-bottom: 5px;
+}
+
+.textinputdiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.typeinputdiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.amountinputdiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.addtransactionbutton {
+  height: 35px;
+  width: 170px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.addtransactionbuttondiv {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* logout component css */
+.logoutparentdiv {
+  background-color: #fdfdfd;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutsuccessfulwindow {
+  /* background-color: #ccc; */
+  width: 60vw;
+  max-width: 750px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutmessage {
+  font-size: 1.4rem;
+  color: black;
+}
+
+/* Loginpage component css */
+
+.medialogincomponentloginbuttondiv {
+  margin-right: 20px;
+  display: none;
+}
+
+.medialogincomponentloginbutton {
+  border-radius: 4px;
+  width: 274px;
+  height: 40px;
+  background-color: #9966cc !important;
+}
+
+.medialogincomponentloginbutton:hover {
+  background-color: #ccc;
+}
+
+.mediaforgotyourpasswordforlogincomponent {
+  margin-left: 80px;
+  font-weight: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.createanaccountdiv span {
+  color: #5c5470;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.createanaccountheaderdiv {
+  display: flex;
+  justify-content: center;
+}
+
+.createanaccountdiv {
+  margin-top: 40px;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+}
+
+.forgotyourpasswordforlogincomponentdiv {
+  margin-top: 20px;
+  color: black;
+}
+
+.forgotyourpasswordforlogincomponent {
+  padding-left: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgotyourpasswordforlogincomponent:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.errorinfoiconforlogincomponent {
+  margin-right: 8px;
+  margin-top: 2px;
+  fill: black;
+}
+
+.logincomponenterrormessage {
+  display: flex;
+  justify-content: center;
+  color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background-color: #fde8e7;
+}
+
+.logincomponenterrormessage span {
+}
+
+.logincomponentremembermediv {
+  margin-top: 15px;
+  padding-left: 0px;
+  color: #352f44;
+}
+
+.usedforalignment {
+  width: 800px;
+  position: relative;
+}
+
+.sektion {
+  height: 100vh;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+}
+
+.loginheader {
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+  color: black;
+}
+
+.loginheaderdiv {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.logincomponentemailinput {
+  margin-top: 5px;
+  background-color: white;
+  border: 1px solid black;
+  width: 400px;
+  height: 30px;
+  font-size: 16px;
+  outline: none;
+
+  margin-bottom: 20px;
+}
+
+.logincomponentpasswordinput {
+  margin-top: 5px;
+  background-color: white;
+  border: 1px solid black;
+  width: 400px;
+  height: 30px;
+  font-size: 16px;
+  outline: none;
+}
+
+.logincomponentpasswordlabel {
+  font-size: 1.1rem;
+  color: black;
+}
+
+.logincomponentemailinput:focus {
+}
+
+.loginemaillabel {
+  font-size: 1.1rem;
+  color: black;
+}
+
+.loginformdiv {
+  height: 500px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medialoginformdiv {
+  height: 500px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logincomponentloginbutton:hover {
+  /* color: black; */
+  background-color: #ccc;
+}
+
+.logincomponentloginbutton {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #9966cc;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  width: 275px;
+  border-radius: 4px;
+}
+
+.logincomponentloginbuttondiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.createanaccountcomponentloginbuttondiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.googlebuttondiv {
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.googlebuttondiv button {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: WHITE;
+  background-image: none;
+  border: 1px solid #747775;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: background-color 0.218s, border-color 0.218s,
+    box-shadow 0.218s;
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.gsi-material-button .gsi-material-button-state {
+  -webkit-transition: opacity 0.218s;
+  transition: opacity 0.218s;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff61;
+  border-color: #1f1f1f1f;
+}
+
+.gsi-material-button:disabled .gsi-material-button-contents {
+  opacity: 38%;
+}
+
+.gsi-material-button:disabled .gsi-material-button-icon {
+  opacity: 38%;
+}
+
+.gsi-material-button:not(:disabled):active .gsi-material-button-state,
+.gsi-material-button:not(:disabled):focus .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 12%;
+}
+
+.gsi-material-button:not(:disabled):hover {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.gsi-material-button:not(:disabled):hover .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 8%;
+}
+
+/* Login component css ended */
+
+/* userinfo css */
+.userinfoparentdiv {
+  outline: 2px solid green;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* forgotpassword component css */
+
+.forgotpasswordparentdiv {
+}
+
+/* media queries */
+
+@media (max-width: 650px) {
+  .tablewrapper {
+  }
+
+  .table {
+    width: 300px;
+  }
+
+  .tablerow {
+    width: 280px;
+  }
+
+  .historydiv {
+    width: 300px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 504px) {
+  .date {
+    visibility: hidden;
+  }
+
+  .historyparentdiv {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 404px) {
+  .profilemodal {
+    right: 50px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 354px) {
+  .profilemodal {
+    right: 30px;
+    top: 60px;
+  }
+}
+
+@media (max-width: 486px) {
+  .logincomponentemailinput,
+  .logincomponentpasswordinput {
+    width: 350px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logincomponentemailinput,
+  .logincomponentpasswordinput {
+    width: 300px;
+  }
+}
+
+@media (max-width: 591px) {
+}
+
+@media (max-width: 435px) {
+  .addtransactiondiv {
+    width: 300px;
+  }
+}
+
+@media (max-height: 550px) {
+  .loginformdiv {
+    margin-top: 10px;
+  }
+
+  .medialoginformdiv {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 500px) {
+  .loginformdiv {
+    margin-top: 0px;
+    height: 430px;
+  }
+
+  .medialoginformdiv {
+    margin-top: 10px;
+    height: 430px;
+  }
+
+  .createanaccountdiv {
+    margin-top: 20px;
+  }
+
+  .logincomponentloginbuttondiv {
+    margin-top: 20px;
+  }
+
+  .createanaccountcomponentloginbuttondiv {
+    margin-top: 20px;
+  }
+
+  .mediaforgotyourpasswordforlogincomponent {
+    display: inline;
+    margin-left: 120px;
+  }
+
+  .forgotyourpasswordforlogincomponentdiv {
+    display: none;
+  }
+}
+
+@media (max-height: 411px) {
+  .loginformdiv {
+    height: 400px;
+  }
+
+  .medialoginformdiv {
+    height: 400px;
+  }
+
+  .medialogincomponentloginbuttondiv {
+    display: inline;
+  }
+
+  .logincomponentloginbutton {
+    display: none;
+  }
+
+  .form-group {
+    text-align: center;
+  }
+}
+
+@media (max-height: 381px) {
+  /* .googlebuttondiv {
+    margin-top: 30px;
+  } */
+
+  .loginformdiv {
+    height: 330px;
+  }
+
+  .medialoginformdiv {
+    height: 350px;
+  }
+}
+
+@media (max-height: 460px) {
+  .medialoginformdiv {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .createanaccountheaderdiv {
+    margin-top: 0px;
+  }
+
+  .createanaccountcomponentloginbuttondiv {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 408px) {
+  .logincomponentloginbuttondiv {
+    margin-top: 0px;
+  }
+}
+
+@media (max-height: 400px) {
+  .medialoginformdiv {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .createanaccountheaderdiv {
+    margin-top: 0px;
+  }
+
+  .createanaccountcomponentloginbuttondiv {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 359px) {
+  .medialoginformdiv {
+    height: 298px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .createanaccountheaderdiv {
+    margin-top: 0px;
+  }
+
+  .createanaccountcomponentloginbuttondiv {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 427px) {
+  .addtransactionparentdiv {
+    margin-top: 10px;
+  }
+}
+@media (max-height: 390px) {
+  .addtransactionparentdiv {
+    margin-top: -15px;
+  }
+
+  .addtransactionbuttondiv {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 407px) {
+  .mediaforgotyourpasswordforlogincomponent {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 425px) {
+  .mediaforgotyourpasswordforlogincomponent {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mediaforgotyourpasswordforlogincomponent {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 333px) {
+  .profilemodal {
+    right: 20px;
+  }
+}
