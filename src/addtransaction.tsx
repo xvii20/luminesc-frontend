@@ -85,7 +85,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({
       googleuid: googleuid,
     };
 
-    console.log(requestBody, 'requestbody');
+    // console.log(requestBody, 'requestbody');
 
     // if the incomeOrExpense variable is Income post this data to the googleincomeroute
     if (incomeOrExpense == 'Income') {
