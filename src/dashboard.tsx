@@ -38,6 +38,7 @@ interface DashboardProps {
     source: string;
     googleuid: string;
     id: number;
+    date: string;
   }[];
   set_Text_And_Amount: React.Dispatch<
     React.SetStateAction<
@@ -47,6 +48,7 @@ interface DashboardProps {
         source: string;
         googleuid: string;
         id: number;
+        date: string;
       }[]
     >
   >;

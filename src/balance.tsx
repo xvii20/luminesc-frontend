@@ -17,6 +17,7 @@ interface BalanceProps {
     source: string;
     googleuid: string;
     id: number;
+    date: string;
   }[];
   set_Text_And_Amount: React.Dispatch<
     React.SetStateAction<
@@ -26,6 +27,7 @@ interface BalanceProps {
         source: string;
         googleuid: string;
         id: number;
+        date: string;
       }[]
     >
   >;
@@ -118,7 +120,7 @@ const Balance: React.FC<BalanceProps> = ({
         <Box display="flex">
           <Box sx={{ marginTop: '5px', padding: '20px' }}>
             {' '}
-            <Typography variant="h7"> Total Income </Typography>
+            <Typography sx={{ fontSize: '18px' }}> Total Income </Typography>
             <Box display="flex" justifyContent="center">
               {' '}
               <Typography variant="h6" sx={{ color: 'green' }}>
@@ -129,7 +131,7 @@ const Balance: React.FC<BalanceProps> = ({
           </Box>
           <Divider orientation="vertical" flexItem />
           <Box sx={{ marginTop: '5px', padding: '20px' }}>
-            <Typography variant="h7"> Total Expense </Typography>
+            <Typography sx={{ fontSize: '18px' }}> Total Expense </Typography>
 
             <Box display="flex" justifyContent="center" sx={{ color: 'red' }}>
               {' '}

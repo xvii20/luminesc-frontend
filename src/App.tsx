@@ -34,7 +34,7 @@ import { auth } from './firebase';
 import { User } from 'firebase/auth';
 import { CircularProgress, Box } from '@mui/material';
 import { Fullhistory } from './fullhistory';
-import { Userinfo } from './userinfo';
+// import { Userinfo } from './userinfo';
 import Forgotpassword from './forgotpassword';
 
 function App() {
@@ -187,7 +187,7 @@ function App() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/dashboard/:uid/userinfo"
           element={
             user ? (
@@ -207,7 +207,7 @@ function App() {
               <Navigate to="/login" />
             )
           }
-        />
+        /> */}
 
         <Route path="/forgotpassword" element={<Forgotpassword />} />
         <Route path="/login" element={<Loginpage />} />

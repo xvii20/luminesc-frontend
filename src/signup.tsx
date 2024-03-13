@@ -25,9 +25,7 @@ import AlertTitle from '@mui/material/AlertTitle';
 import { error } from 'console';
 import { getCurrentUser } from './getcurrentuser';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
-import 'react-tippy/dist/tippy.css';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+
 // import { Tooltip, withTooltip } from 'react-tippy';
 
 export default function Signup() {
