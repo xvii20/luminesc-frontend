@@ -90,7 +90,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({
     // if the incomeOrExpense variable is Income post this data to the googleincomeroute
     if (incomeOrExpense == 'Income') {
       // if the amount field is empty, then amount will be 0
-      if (amount == '') {
+      if (!amount) {
         requestBody.amount = 0;
 
         try {
@@ -135,7 +135,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({
     // if the incomeOrExpense variable is Expense post this data to the googleexpense route
     else {
       // if the amount field is empty, then amount will be 0
-      if (amount == '') {
+      if (!amount) {
         requestBody.amount = 0;
 
         try {
